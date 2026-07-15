@@ -21,6 +21,44 @@ Clock: 50 MHz | Baud rate: 9600
 4. **Physical Design** — floorplanning, placement, clock tree synthesis, and routing performed using OpenLane, producing a GDSII layout. Zero setup/hold timing violations.
 5. **Layout Inspection** — final GDS reviewed visually in KLayout.
 
+## Screenshots
+
+   ### Simulation Waveform
+   ![Waveform](images/waveform.png)
+
+   ### Chip Layout (KLayout)
+   ![Layout](images/layout.png)
+
+
+## Synthesis Report
+
+```
+
+   Number of wires:                112
+   Number of wire bits:            162
+   Number of public wires:          11
+   Number of public wire bits:      43
+   Number of ports:                  6
+   Number of port bits:             13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                151
+     $_ANDNOT_                      39
+     $_AND_                          1
+     $_DFFE_PP0P_                    6
+     $_DFFE_PP1P_                    1
+     $_DFFE_PP_                      8
+     $_DFF_PP0_                     17
+     $_MUX_                         10
+     $_NAND_                        14
+     $_NOR_                          5
+     $_NOT_                          3
+     $_ORNOT_                       11
+     $_OR_                          18
+     $_XNOR_                         4
+     $_XOR_                         14
+```
 ## What I learned
 
 - How UART protocol timing works and how to implement it as an FSM in Verilog.
