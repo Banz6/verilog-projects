@@ -12,6 +12,16 @@ A UART (Universal Asynchronous Receiver/Transmitter) sends data one bit at a tim
 - `uart_tx_tb.v` — testbench that sends the byte `0x41` ('A') and dumps a waveform for verification.
 
 Clock: 50 MHz | Baud rate: 9600
+## Verification
+
+Full verification plan, methodology, and coverage results: [VERIFICATION_PLAN.md](VERIFICATION_PLAN.md)
+
+- `uart_rx.v` — receiver, mid-bit sampling FSM
+- `uart_loopback_tb.v` — self-checking testbench: TX output directly wired to RX input, automatic pass/fail scoreboard
+
+**Result:** 25/25 tests passed (5 directed + 20 randomized), 7/7 functional coverage points hit (100%)
+
+![Loopback test results](images/loopback_results.png)
 
 ## Flow
 
